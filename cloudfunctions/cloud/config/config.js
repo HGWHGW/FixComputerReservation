@@ -1,9 +1,9 @@
 module.exports = {
 
 	//### 环境相关 
-	CLOUD_ID: 'dev-5gf0o85o226fad1d', //你的云环境id 
+	CLOUD_ID: 'cloud1-6gldhrzab30c90b1', //你的云环境id 
 
-	ADMIN_NAME: 'admin', // 管理员账号（5-30位)
+	ADMIN_NAME: 'gorway', // 管理员账号（5-30位)
 	ADMIN_PWD: '123456', // 管理员密码（5-30位) 
 
 

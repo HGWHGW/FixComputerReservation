@@ -4,10 +4,9 @@ let skin = require('../../skin/skin.js');
 
 Page({
 	behaviors: [behavior],
-
 	onReady: function () {
 		PassortBiz.initPage({
-			skin,
+			skin, //传给wxml的数据
 			that: this,
 			isLoadSkin: true,
 			tabIndex: -1,

@@ -8,8 +8,8 @@ module.exports = {
  
 	MENU_ITEM: ['首页', '预约日历', '我的'], // 第1,4,5菜单
 
-	NEWS_CATE: '1=车行动态|rightpic,2=养车知识|leftpic',
-	MEET_TYPE: '1=保养预约|leftbig2,2=维修预约|leftbig3,3=汽车检测|leftbig2,4=美容洗车|leftbig3',
+	NEWS_CATE: '1=A1-208动态|rightpic,2=预约须知|leftpic',
+	MEET_TYPE: '1=换硅脂预约|leftbig2,2=加装硬盘预约|leftbig3,3=还没想好|leftbig2,4=笔记本清灰|leftbig3',
 
 	DEFAULT_FORMS: [{
 			type: 'line',

@@ -107,8 +107,9 @@ class AdminMeetService extends BaseAdminService {
 		isShowLimit,
 		formSet,
 	}) {
-
-		this.AppError('此功能暂不开放，如有需要请加作者微信：cclinux0730');
+		// TODO:
+		
+		// this.AppError('此功能暂不开放，如有需要请加作者微信：cclinux0730');
 	}
 
 	/**删除数据 */
