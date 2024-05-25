@@ -180,6 +180,7 @@ Page({
 	},
 
 	bindFormEditSubmit: async function () {
+		// console.log("enter bindFormEditSubmit")
 		pageHelper.formClearFocus(this);
 
 		if (!AdminBiz.isAdmin(this)) return;
@@ -204,11 +205,13 @@ Page({
 		data.typeName = AdminMeetBiz.getTypeName(data.typeId);
 
 		try {
+			console.log("0")
 			let meetId = this.data.id;
 			data.id = meetId;
 
 			// 先修改，再上传 
 			await cloudHelper.callCloudSumbit('admin/meet_edit', data);
+			console.log("1")
 
 			// 富文本 提交处理
 			let formContent = this.data.formContent;
@@ -217,7 +220,7 @@ Page({
 				mask: true
 			});
 			if (!await AdminMeetBiz.updateMeetCotnentPic(meetId, formContent, this)) return;
-
+			console.log("2")
 
 			// 样式 提交处理
 			let formStyleSet = this.data.formStyleSet;
@@ -226,7 +229,7 @@ Page({
 				mask: true
 			});
 			if (!await AdminMeetBiz.updateMeetStyleSet(meetId, formStyleSet, this)) return;
-
+			console.log("3")
 
 			let callback = async function () { 
 				// 更新列表页面数据
@@ -240,7 +243,6 @@ Page({
 				}
 				pageHelper.modifyPrevPageListNodeObject(meetId, node);
 				wx.navigateBack();
-
 			}
 			pageHelper.showSuccToast('编辑成功', 2000, callback);
 

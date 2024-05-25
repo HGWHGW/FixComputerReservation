@@ -431,6 +431,7 @@ class AdminMeetBiz extends BaseBiz {
 	 * @param {Array} content  富文本数组
 	 */
 	static async updateMeetStyleSet(meetId, styleSet, that) {
+		console.log("updateMeetStyleSet begin")
 		let pic = styleSet.pic;
 
 		// 图片上传到云空间
@@ -447,6 +448,7 @@ class AdminMeetBiz extends BaseBiz {
 
 		try {
 			// 更新数据 从promise 里直接同步返回
+			console.log("updateMeetStyleSet try")
 			await cloudHelper.callCloudSumbit('admin/meet_update_style', params);
 			that.setData({
 				formStyleSet: styleSet
@@ -491,6 +493,7 @@ class AdminMeetBiz extends BaseBiz {
 
 		try {
 			// 更新数据 从promise 里直接同步返回
+			// console.log()
 			await cloudHelper.callCloudSumbit('admin/meet_update_content', params);
 			that.setData({
 				formContent: content
