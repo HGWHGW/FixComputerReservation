@@ -323,7 +323,15 @@ class AdminMeetService extends BaseAdminService {
 
 	/**修改项目状态 */
 	async statusMeet(id, status) {
-		this.AppError('此statusMeet功能暂不开放，如有需要请加作者微信：cclinux0730');
+		// DONE:修改可预约项目状态功能
+		let where = {
+			_id:id,
+		}
+		let data = {
+			MEET_STATUS:status
+		}
+		let Id = await MeetModel.insertOrUpdate(where,data);
+		// this.AppError('此statusMeet功能暂不开放，如有需要请加作者微信：cclinux0730');
 	}
 
 	/**置顶排序设定 */
