@@ -142,7 +142,6 @@ class AdminMeetService extends BaseAdminService {
 		content // 富文本数组
 	}) {
 		// 更新富文本内容
-		// console.log("updateMeetContent")
 		let where={
 			_id:meetId,
 		}
@@ -200,7 +199,6 @@ class AdminMeetService extends BaseAdminService {
 			MEET_IS_SHOW_LIMIT:isShowLimit,
 			MEET_FORM_SET:formSet
 		}
-		console.log("id = " + String(id))
 		let meedId = await MeetModel.insertOrUpdate(where,data);
 		// this.AppError('此_editDays功能暂不开放，如有需要请加作者微信：cclinux0730');
 	}
@@ -218,7 +216,6 @@ class AdminMeetService extends BaseAdminService {
 		isTotal = true,
 		oldTotal
 	}) {
-
 		orderBy = orderBy || {
 			'JOIN_EDIT_TIME': 'desc'
 		};
